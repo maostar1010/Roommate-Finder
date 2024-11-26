@@ -27,34 +27,7 @@ function CreateProfile({ userId }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    /*const { fullName, description, rentRange, cleanliness, roomCapacity, location, noiseTolerance, socialHabits, sleepSchedule } = formData;
-
-    if (!fullName || !description || !rentRange || !cleanliness || !roomCapacity || !location || !noiseTolerance || !socialHabits.length || !sleepSchedule) {
-      alert('All fields are required!');
-      return;
-    } */
-
-    try {
-      const response = await axios.post("http://localhost:8800/api/profile", {
-        user_id: userId,
-        description: formData.description,
-        rentRange: formData.rentRange,
-        cleanliness: formData.cleanliness,
-        roomCapacity: formData.roomCapacity,
-        location: formData.location,
-        noiseTolerance: formData.noiseTolerance,
-        socialHabits: formData.socialHabits,
-        sleepSchedule: formData.sleepSchedule,
-      });
-
-      alert(response.data.message);
-      navigate('/Home'); // redirect to home after profile creation
-    } catch (error) {
-      console.error('Error creating profile:', error);
-      alert(error.response?.data?.message || 'Error creating profile');
-    }
-  };
+  }; 
 
   return (
     <main className={'profile-container'}>
