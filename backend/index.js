@@ -74,12 +74,12 @@ const io = new Server(httpServer, {
 io.on("connection", (socket) => {
   console.log(`User connected: ${socket.id}`);
 
-  // Listen for new messages from the client
   socket.on("sendMessage", (message) => {
-      console.log("Message received:", message);
+      console.log("Message received on server:", message);
+  });
 
-      // Broadcast the message to all clients
-      io.emit("receiveMessage", message);
+  socket.on("sendRequest", (request) => {
+      console.log("Request received on server:", request);
   });
 
   socket.on("disconnect", () => {
