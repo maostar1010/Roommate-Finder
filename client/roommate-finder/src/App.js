@@ -11,6 +11,8 @@ import Admin from './admin';
 import CreateProfile from './register/createProfile';
 import TestWebSocket from "./TestWebSocket";
 
+
+// TestWebSocket is for testing
 function App() {
     return (
         <Router>
