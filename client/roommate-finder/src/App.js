@@ -9,7 +9,10 @@ import Messages from './messages/Messages';
 import Account from './account/Account';
 import Admin from './admin';
 import CreateProfile from './register/createProfile';
+import TestWebSocket from "./TestWebSocket";
 
+
+// TestWebSocket is for testing
 function App() {
     return (
         <Router>
@@ -23,6 +26,7 @@ function App() {
                 <Route path="/Requests" element={<HeaderLayout><Requests /></HeaderLayout>} />
                 <Route path="/Messages" element={<HeaderLayout><Messages /></HeaderLayout>} />
                 <Route path="/Account" element={ <HeaderLayout> <Account /></HeaderLayout>}/>
+                <Route path="/test" element={<TestWebSocket />} />
             </Routes>
         </Router>
 
